@@ -1,3 +1,13 @@
+<?php
+/**
+ * Application Name:     RIMES Assignment 
+ * Author:   			Ahsan Gul <ahsan_ansian@yahoo.com>
+ * Description:          User registration and login system where users can publish articles or news.<br>
+ * 					Chart is displayed based on letters 'r', 'i', 'm', 'e', and 's' occurances in articles.
+ * 
+**/
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

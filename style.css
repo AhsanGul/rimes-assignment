@@ -117,3 +117,33 @@ ul {
   li .active {
 	background-color: #111;
   }
+
+  .badge {
+	background-color: #5BC0EB;
+	color: #fff;
+	padding: 5px 10px;
+	display: inline-block;
+	position: relative;
+	margin: 15px;
+  }
+  
+  .badge-text {
+	font-size: 16px;
+	font-weight: bold;
+  }
+  
+  .badge-number {
+	font-size: 16px;
+	font-weight: bold;
+	position: absolute;
+	top: 0;
+	right: 0;
+	transform: translateY(-50%) translateX(50%);
+	background-color: #fff;
+	color: #5BC0EB;
+	padding: 2px 5px;
+	border-radius: 50%;
+	min-width: 20px;
+  text-align: center;
+  }
+  

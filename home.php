@@ -1,4 +1,12 @@
-<?php 
+<?php
+/**
+ * Application Name:     RIMES Assignment 
+ * Author:   				     Ahsan Gul <ahsan_ansian@yahoo.com>
+ * Description:          User registration and login system where users can publish articles or news.<br>
+ * 							         Chart is displayed based on letters 'r', 'i', 'm', 'e', and 's' occurances in articles.
+ * 
+**/
+
 session_start();
 include "db_conn.php";
 if (isset($_SESSION['user_id']) && isset($_SESSION['email'])) {
@@ -45,7 +53,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['email'])) {
                        legend: {position: 'bottom'},
                        colors: ['#5BC0EB'],
                        is3D:true};
-        // Instantiate and draw our chart, passing in some options.
+        // Instantiate and draw our chart, passing in options.
         var chart = new google.visualization.BarChart(document.getElementById('chart_div'));
         chart.draw(data, options);
       }
@@ -66,10 +74,14 @@ if (isset($_SESSION['success'])) {
 }
 
 ?>
-<div class="container">
-     <h1>Hello, <?php echo $_SESSION['name']; ?></h1>
-     <div style="width: 100%; height: 400px; margin-top: 20px;" id="chart_div"></div>
-</div>
+  <div class="container">
+    <h1>Hello, <?php echo $_SESSION['name']; ?></h1>
+    <div style="width: 100%; height: 400px; margin-top: 20px;" id="chart_div"></div>
+    <div class="badge">
+      <span class="badge-text">Total Articles</span>
+      <span class="badge-number"><?php echo number_format(count($all_rows)); ?></span>
+    </div>
+  </div>
 </body>
 </html>
 
